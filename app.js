@@ -39,18 +39,26 @@ app.get('/items', (req, res) => {
 });
 
 
+// Specific item route - handle before the generic /items route
 app.get('/item/:key', (req, res) => {
   console.log("Request " + req.method, req.url, req.hostname + req.ip);
 
   const { key } = req.params;
-  if (jsonData[key]) {
-    res.json(jsonData[key]);
-    console.log(jsonData[key]);
+
+  // Find the item case-insensitively
+  const foundItem = Object.values(jsonData.items).find(
+    (item) => item.item.toLowerCase() === key.toLowerCase()
+  );
+
+  if (foundItem) {
+    res.json(foundItem);
+    console.log(foundItem);
   } else {
     res.status(404).json({ error: 'Item not found:' + key });
     console.log("NOT FOUND " + key);
   }
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
