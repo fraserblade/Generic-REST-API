@@ -1,5 +1,9 @@
 # Generic-REST-API
-Simple API based on Node/Express and packaged with Docker
+Simple API based on Node/Express and packaged with Docker.
+
+Get up and running fast!
+
+Use as a template to build and customise more complex services.
 
 ## Building & Running - Docker
     docker build -t ghcr.io/[owner]/generic-rest-api:latest .
