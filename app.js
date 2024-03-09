@@ -9,7 +9,7 @@ const PORT = 3000;
 const dataPath = path.join(__dirname, 'items.json');
 let jsonData = {};
 
-// Load vehicle data from JSON file
+// Load data from JSON file
 try {
   const rawData = fs.readFileSync(dataPath);
   jsonData = JSON.parse(rawData);
@@ -33,12 +33,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/items', (req, res) => {
-  console.log("Request " + req.method, req.url, req.hostname + req.ip);
-  res.json(jsonData);
-});
-
-
 // Specific item route - handle before the generic /items route
 app.get('/item/:key', (req, res) => {
   console.log("Request " + req.method, req.url, req.hostname + req.ip);
@@ -59,6 +53,10 @@ app.get('/item/:key', (req, res) => {
   }
 });
 
+app.get('/items', (req, res) => {
+  console.log("Request " + req.method, req.url, req.hostname + req.ip);
+  res.json(jsonData);
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
