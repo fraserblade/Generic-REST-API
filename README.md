@@ -1,7 +1,7 @@
 # Generic-REST-API
 Simple API based on Node/Express and packaged with Docker.
 
-Get up and running fast!
+Get up and running fast! Just drop the data you want to expose into items.json and you are good. Note this is intentionally a read-only service, to keep things simple.
 
 Use as a template to build and customise more complex services.
 
