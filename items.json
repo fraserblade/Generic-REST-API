@@ -1,14 +1,12 @@
-{
-    "items": [
-        {"item": "Test", "value": 1},
-        {"item": "Symphony", "value": 2},
-        {"item": "Echo Times", "value": 5},
-        {"item": "Celestial", "value": 1},
-        {"item": "Harmony", "value": 3},
-        {"item": "Whispers", "value": 5},
-        {"item": "Silence Over All The Land", "value": 4},
-        {"item": "Labyrinth", "value": 2},
-        {"item": "Destiny 1", "value": 3},
-        {"item": "Destiny 2", "value": 3}
-    ]
-}
+[
+    {"item": "Test", "value": 1},
+    {"item": "Symphony", "value": 2},
+    {"item": "Echo Times", "value": 5},
+    {"item": "Celestial", "value": 1},
+    {"item": "Harmony", "value": 3},
+    {"item": "Whispers", "value": 5},
+    {"item": "Silence Over All The Land", "value": 4},
+    {"item": "Labyrinth", "value": 2},
+    {"item": "Destiny 1", "value": 3},
+    {"item": "Destiny 2", "value": 3}
+]

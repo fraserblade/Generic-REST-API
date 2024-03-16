@@ -34,13 +34,14 @@ app.use((req, res, next) => {
 });
 
 // Specific item route - handle before the generic /items route
+//
 app.get('/item/:key', (req, res) => {
   console.log("Request " + req.method, req.url, req.hostname + req.ip);
 
   const { key } = req.params;
 
   // Find the item case-insensitively
-  const foundItem = Object.values(jsonData.items).find(
+  const foundItem = jsonData.find(
     (item) => item.item.toLowerCase() === key.toLowerCase()
   );
 
@@ -53,6 +54,8 @@ app.get('/item/:key', (req, res) => {
   }
 });
 
+// Route for all items
+//
 app.get('/items', (req, res) => {
   console.log("Request " + req.method, req.url, req.hostname + req.ip);
   res.json(jsonData);
